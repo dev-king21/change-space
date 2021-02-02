@@ -1,19 +1,19 @@
 <template>
   <v-row>
-    <v-col md="6" class="px-12 text-center" align-self="center" cols="12">
+    <v-col md="6" class="px-6 text-center" align-self="center" cols="12">
       <h2 class="display-2 text-center mb-6">Lorem Ipsum <br />Lorem Ipsum</h2>
-      <div class="exchange-description text-left px-12">
+      <div class="exchange-description text-left px-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus
         nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem
         felis necerat. Aliquam egestas, velit at condimentum placerat, sem
         sapien laoreet mauris, dictum porttito
       </div>
-      <div class="text-left px-12 mt-4">
+      <div class="text-left px-6 mt-4">
         <v-btn class="ma-2" large outlined color="primary">Button1</v-btn>
         <v-btn class="ma-2" large outlined color="warning">Button2</v-btn>
       </div>
     </v-col>
-    <v-col md="6" class="px-6" cols="12">
+    <v-col md="6" class="" cols="12">
       <v-tabs v-model="tab" align-with-title>
         <v-tabs-slider color="primary"></v-tabs-slider>
 

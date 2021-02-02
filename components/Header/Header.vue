@@ -23,7 +23,15 @@
             <v-btn v-if="isTablet" text icon @click.stop="handleToggleOpen">
               <v-icon>mdi-menu</v-icon>
             </v-btn>
-            <div class="logo">
+            <div class="mobile-logo" v-if="isTablet">
+              <a href="#home" class="logo-dark">
+                <img :src="logo_dark" alt="logo" />
+              </a>
+              <a href="#home" class="logo-light">
+                <img :src="logo_light" alt="logo" />
+              </a>
+            </div>
+            <div class="logo" v-if="!isTablet">
               <a href="#home" class="logo-dark">
                 <img :src="logo_dark" alt="logo" />
               </a>

@@ -62,7 +62,7 @@
 
 .feature-item {
   position: relative;
-  margin-bottom: $spacing20;
+  margin-bottom: $spacing6;
   @include breakpoints-down(xs) {
     text-align: center;
   }

@@ -36,7 +36,7 @@
       </u-animate-container>
       <u-animate-container>
         <v-row>
-          <v-col md="4" class="px-6" cols="12">
+          <v-col v-if="isDesktop" md="4" class="px-6" cols="12">
             <div class="feature-item">
               <u-animate name="zoomIn" delay="0.3s" duration="0.6s">
                 <div class="deco1" />
@@ -60,6 +60,18 @@
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
+              </u-animate>
+            </div>
+          </v-col>
+          <v-col v-if="isTablet" md="4" class="px-6" cols="12">
+            <div class="feature-item">
+              <u-animate name="zoomIn" delay="0.3s" duration="0.6s">
+                <div class="deco1" />
+              </u-animate>
+              <u-animate name="fadeInLeft" delay="0.5s" duration="0.6s">
+                <figure class="img">
+                  <img :src="imgAPI.photo[0]" alt="img" />
+                </figure>
               </u-animate>
             </div>
           </v-col>
@@ -100,7 +112,7 @@
       </u-animate-container>
       <u-animate-container>
         <v-row>
-          <v-col md="4" class="px-6" cols="12">
+          <v-col md="4" v-if="isDesktop" class="px-6" cols="12">
             <div class="feature-item">
               <u-animate name="zoomIn" delay="0.3s" duration="0.6s">
                 <div class="deco1" />
@@ -124,6 +136,18 @@
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
+              </u-animate>
+            </div>
+          </v-col>
+          <v-col md="4" v-if="isMbile" class="px-6" cols="12">
+            <div class="feature-item">
+              <u-animate name="zoomIn" delay="0.3s" duration="0.6s">
+                <div class="deco1" />
+              </u-animate>
+              <u-animate name="fadeInLeft" delay="0.5s" duration="0.6s">
+                <figure class="img">
+                  <img :src="imgAPI.photo[0]" alt="img" />
+                </figure>
               </u-animate>
             </div>
           </v-col>
@@ -164,6 +188,16 @@ export default {
     return {
       imgAPI,
     }
+  },
+  computed: {
+    isTablet() {
+      const mdDown = this.$store.state.breakpoints.mdDown
+      return mdDown.indexOf(this.$mq) > -1
+    },
+    isDesktop() {
+      const lgUp = this.$store.state.breakpoints.lgUp
+      return lgUp.indexOf(this.$mq) > -1
+    },
   },
 }
 </script>

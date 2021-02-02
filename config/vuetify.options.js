@@ -1,15 +1,15 @@
 import colors from 'vuetify/lib/util/colors'
 
-let darkMode = false
+let darkMode = true
 if (typeof Storage !== 'undefined') { // eslint-disable-line
-  darkMode = localStorage.getItem('darkMode') || false
+  darkMode = localStorage.getItem('darkMode') || true
 }
 
 const palette = {
   greenLeaf: {
-    primary: colors.green.base, // primary main
+    primary: '#0083ff', //colors.green.base, // primary main
     primarylight: colors.green.lighten4, // primary light
-    primarydark: colors.green.darken4, // primary dark
+    primarydark: '#04144c',//colors.green.darken4, // primary dark
     secondary: colors.blueGrey.base, // secondary main
     secondarylight: colors.blueGrey.lighten4, // secondary light
     secondarydark: colors.blueGrey.darken3, // secondary dark
@@ -25,13 +25,14 @@ export const theme = {
 export default {
   rtl: false,
   theme: {
-    dark: darkMode === 'true',
+    dark: darkMode == 'true',
     themes: {
       light: {
         ...theme
       },
       dark: {
-        ...theme
+        ...theme,
+        background: '#04144c'
       }
     },
     options: {

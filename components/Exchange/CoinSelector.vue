@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 my-4">
+  <div class="my-4">
     <v-row class="coin-selector">
       <v-col cols="8" class="px-4">
         <v-text-field v-model="last" :label="hintText" />
@@ -39,7 +39,7 @@
 </template>
 <style lang="scss">
 .coin-selector {
-  background: #e2e2e2;
+  background: #e4e6ed;
   border-radius: 6px;
 
   .coin-type-selector {
@@ -89,9 +89,9 @@
 }
 
 .theme--dark .coin-selector {
-  background: #1e1e1e !important;
+  background: #00000088 !important;
   .coin-type-selector {
-    /* background: #323232 !important; */
+    /*background: #323232 !important;*/
   }
 }
 .v-application .v-menu__content {

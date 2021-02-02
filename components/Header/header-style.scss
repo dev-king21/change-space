@@ -74,6 +74,12 @@ $flag: '/images/flag-logo.png';
         width: auto
       }
     }
+    .mobile-logo {
+      img {
+        height: 20px;
+        width: auto
+      }
+    }
     nav {
       padding: spacing(1, 0);
     }
@@ -113,6 +119,14 @@ $flag: '/images/flag-logo.png';
     transition: all 0.3s ease;
     // max-width: 48px;
     height: 48px
+  }
+}
+
+.mobile-logo {
+  & img {
+    transition: all 0.3s ease;
+    // max-width: 48px;
+    height: 24px
   }
 }
 

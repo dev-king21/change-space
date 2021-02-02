@@ -123,7 +123,7 @@ export default {
   },
   data() {
     return {
-      dark: darkMode,
+      dark: darkMode === 'true',
     }
   },
   head() {
